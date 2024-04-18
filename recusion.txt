@@ -1,0 +1,32 @@
+ALGORITHM palindrome_check
+VAR
+    strat : INTEGER := 0
+    end : INTEGER := str.length -1 
+BEGIN
+
+    FUNCTION (str , strat , end) : BOOLEAN
+    BEGIN
+        IF (strat >= end ) THEN
+            RETURN ture
+        ELSE_IF (str[strat] = str[end]) THEN
+            RETURN function(str , strat+1, end-1)
+        ELSE
+            RETURN false
+        END_IF
+    END
+END
+
+ALGORITHM power_function
+VAR
+    rslt : INTEGER :=1
+BEGIN
+    FUNCTION power(x , n) : INTEGER
+    VAR
+    BEGIN
+    IF (n=0) THEN
+        RETURN rslt 
+    ELSE
+        rslt := x * power(x , n-1)
+    END_IF ;
+    END
+END

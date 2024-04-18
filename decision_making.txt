@@ -1,0 +1,25 @@
+ALGORITHM leap_year_checker
+VAR
+    year : INTEGER 
+BEGIN
+input year
+IF ( year mod 4 = 0 and year MOD 100 ≠ 0 ) OR (year MOD 400 = 0)THEN
+    write "leap year"
+ELSE
+    write " not a leap year"
+END_IF
+
+END 
+
+ALGORITHM ticket_pricing
+VAR
+    age : INTEGER
+BEGIN
+input age 
+SWITCH (age) DO
+    case <= 12 : write "10$"
+    case <= 17: write "15$"
+    default : write "20$"
+END_SWITCH
+END
+
